@@ -1,0 +1,37 @@
+<html>
+<head>
+<style>
+*{ font-size: 50px; font-family: timesnewroma;}
+body { background-color: lightblue;}
+</style>
+<script>
+function show()
+{
+       event.preventDefault();
+let name = document.getElementById("name");
+let msg = document.getElementById("msg");
+let d=new Date();
+let hr=d.getHours();
+if(hr<12)
+msg.innerHTML="GOOD MORNING " + name.value;
+else if(hr<16)
+msg.innerHTML="GOOD AFTERNOON " + name.value;
+else
+msg.innerHTML="GOOD EVENING " + name.value;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>
+Greeting App
+</h1>
+<form onsubmit = "show()">
+<input type = "text" placeholder = " Enter your name" id= "name"/>
+<br><br>
+<input type = "Submit" />
+</form>
+<h2 id= "msg" />
+</center>
+</body>
+</html>
